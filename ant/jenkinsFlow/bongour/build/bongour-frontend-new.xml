@@ -51,6 +51,7 @@
         <move todir="/apps/node-apps/${dirName}">
             <fileset dir="/apps/node-apps/${vDirName}/" defaultexcludes="no"/>
         </move>
+        <echo file=“/apps/node-apps/${dirName}/app/env.js" message="${url}" append="true"/>
         <chmod  perm="755" verbose="true">
             <dirset dir="/apps/node-apps/${dirName}"/>
         </chmod>
